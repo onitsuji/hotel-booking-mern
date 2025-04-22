@@ -1,6 +1,6 @@
 import express, { type Response, type Request } from "express";
 import cors from "cors";
-import "dotenv/config";
+import { ENV } from "./config/env";
 
 export const app = express();
 // Middleware
