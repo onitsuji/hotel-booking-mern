@@ -5,7 +5,7 @@ export default function RootLayout() {
   return (
     <div>
       <header className="bg-blue-500 text-white">
-        <nav className="flex justify-between container mx-auto py-4 items-center px-2 md:px-0">
+        <nav className="flex justify-between py-4 items-center container">
           <div>
             <Link to="/" className="text-2xl font-bold">
               Getaways
@@ -21,7 +21,23 @@ export default function RootLayout() {
           </div>
         </nav>
       </header>
-      <Outlet />
+      <Hero />
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
+}
+
+function Hero() {
+  return (
+    <div className="bg-blue-500 pb-20">
+      <div className="text-white space-y-1 container mx-auto">
+        <h1 className="text-5xl">Find your next getaway</h1>
+        <p className="text-lg">
+          Search our low prices for your next holiday destination
+        </p>
+      </div>
     </div>
   );
 }
